@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #4337de;
+  color: white;
+}
+
+.navbar__logo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.navi {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #4337de;
+  padding: 20px;
+  
+}
+
+.navi a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.navi a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.navi a:hover::after{
+  width:100%;
+}
+
+.navbar__links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar__links a:hover {
+  text-decoration: underline;
+}
+h1{
+      font-family: 'Roboto', sans-serif;
+      font-size: 50px;
+      color:red;
+      text-align: center;
+      
+      
+    }
+    nav{font-size: x-large;
+        text-align: center;
+        margin: 0px;
+        line-height: 40px;}
+
+p{
+     background-color: yellow;
+     color:red;
+     line-height: 20px;
+     text-align: center;
+     
+}
+
+    /*BEM- styling*/
+.card_button{
+    background-color:gold;
+    color:black;
+    border:inset;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+/*Pseudo-class: button active*/
+.card_button:hover{
+  background-color: blue;
+
+}
+.card_button:active{
+  background-color: dodgerblue;
+}
+.card_button:after{
+  content: " !";
+  font-weight: bold;
+}
+
+/* SMALL DEVICES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navi {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .navi a {
+    font-size: 18px;
+  }
+}
